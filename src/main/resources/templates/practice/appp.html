@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 클릭 예제</title>
+    <style>
+        .card {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+
+        .card-content {
+            flex-grow: 1;
+        }
+
+        .heart {
+            width: 24px;
+            height: 24px;
+            background: url('heart-icon.png') no-repeat center center;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .heart.liked {
+            background: url('heart-icon-liked.png') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+<a href="다음페이지.html" class="card">
+    <div class="card-content">
+        <strong>Bronx</strong>
+        <p>운영시간: 10시 30분 - 12시 30분<br>가격: 8000원</p>
+    </div>
+    <div class="heart" onclick="toggleLike(event)"></div>
+</a>
+
+<script>
+    function toggleLike(event) {
+        event.stopPropagation(); // 클릭 이벤트가 부모 요소로 전파되지 않게 함
+        event.preventDefault(); // 기본 링크 동작 방지 (필요 시 사용)
+        var heartIcon = event.currentTarget;
+        heartIcon.classList.toggle('liked');
+    }
+</script>
+
+</body>
+</html>

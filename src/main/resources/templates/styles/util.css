@@ -1,0 +1,17 @@
+    .btn{
+
+
+    }
+
+
+    .icon{
+        background-image: url("");
+        background-repeat: no-repeat;
+
+        /*test*/
+        border: 1px solid red;
+        padding-left: 100px;
+        width: 24px;
+
+        /*display: inline;*/
+    }

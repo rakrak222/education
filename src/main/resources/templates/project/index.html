@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+</head>
+<body>
+    <header id="header">
+        <h1 class="hidden">상단 메뉴</h1>
+        <div class="top-menu-container">
+            <div class="back-button">
+                <button>
+                    <a href="#"><img src="뒤로가기" alt="뒤로가기"></a>
+                </button>
+            </div>
+            <div class="action-buttons">
+                <div><a href="#"><img src="찜" alt="찜"></a></div>
+                <div><a href="#"><img src="공유하기" alt="공유하기"></a></div>
+            </div>
+        </div>
+    </header>
+
+
+    <main id="main">
+        <h1 class="hidden">상세 페이지 메뉴</h1>
+        <section class="slide-container">
+            <h1 class="hidden">사진 슬라이드쇼</h1>
+            <ul class="picture-slide-container">
+                <li><div class="photo-menu"><img src="" alt="음식사진"></div></li>
+                <li><div class="photo-menu"><img src="" alt="음식사진"></div></li>
+                <li><div class="photo-menu"><img src="" alt="음식사진"></div></li>
+                <li><div class="photo-menu"><img src="" alt="음식사진"></div></li>
+            </ul>
+            <div>
+                dot
+                <!-- 닷 추후 구현  -->
+            </div>
+        </section>
+
+        <section class="detail-summary">
+            <h1 class="hidden">요약정보</h1>
+            <div class="store-name">인쌩맥주</div>
+            <div class="store-summary">
+                <div class="store-score">별점: 4</div>
+                <div class="review-cnt">리뷰수 : 23</div>
+            </div>
+        </section>
+
+        <section class="detail-menutab">
+            <h1 class="hidden">상세 페이지 하위 탭</h1>
+            <nav class="detail-nav">
+                <ul class="detail-menutab-nav">
+                    <li><a href="/detail/home">홈</a></li>
+                    <li><a href="/detail/menu">메뉴</a></li>
+                    <li><a href="/detail/ticket">식권</a></li>
+                    <li><a href="/detail/review">리뷰</a></li>
+                    <li><a href="/detail/notice">공지사항</a></li>
+                </ul>
+            </nav>
+        </section>
+
+
+
+        <section class="detail-inf">
+            <h1 class="hidden">활성화 탭 - 홈</h1>
+            <div>
+                <div>위치</div>
+                <div>운영시간</div>
+                <div>가격</div>
+            </div>
+        </section>
+
+        <section>
+            <h1>활성화 탭 - 메뉴</h1>
+            <p>메뉴목록</p>
+        </section>
+
+        <section>
+            <h1>활성화 탭 - 식권</h1>
+            <div class="ticket-container">
+                <ul>
+                    <li class="ticket-list-item">
+                        <div>
+                            <div><img src="" alt="사진 없음"></div>
+                            <div>인쌩맥주</div>
+                            <div>식권잔여개수 10개</div>
+                            <div class="charge-button"><button><a href="/ticket/purchase">충전하기</a></button></div>
+                        </div>
+                    </li>
+                    <li class="ticket-list-item">
+                        <div>
+                            <div><img src="" alt="사진 없음"></div>
+                            <div>인쌩맥주</div>
+                            <div>식권잔여개수 10개</div>
+                            <div class="charge-button"><button><a href="/ticket/purchase">충전하기</a></button></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h1>활성화 탭 - 리뷰</h1>
+            <ul>
+                <li>
+                    <div class="review-info">
+                        <div>별점</div>
+                        <div>리뷰내용</div>
+                        <div>
+                            <div class="reviewer-info">
+                                <div><img src="" alt="리뷰어사진"></div>
+                                <div>Reviewer name</div>
+                            </div>
+                            <div>Date</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h1>활성화 탭 - 공지사항</h1>
+            <ul>
+                <li>
+                    <div>
+                        <div><img src="" alt="공지사항 사진"></div>
+                        <div>제목</div>
+                        <div>공지 내용</div>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <div><img src="" alt="공지사항 사진"></div>
+                        <div>제목</div>
+                        <div>공지 내용</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="bottom-bar">
+            <h1 class="hidden">하단 메뉴</h1>
+            <nav>
+              <ul class="bottom-nav-bar">
+                <div><a href="#">검색</a></div>
+                <div><a href="#">식권</a></div>
+                <div><a href="#">관심매장</a></div>
+                <div><a href="#">내정보</a></div>
+              </ul>
+            </nav>
+        </section>
+    </main>
+
+</body>
+<footer></footer>
+</html>

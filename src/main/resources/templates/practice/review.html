@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰 평균 별점</title>
+    <style>
+        .star-rating {
+            position: relative;
+            display: inline-block;
+            font-size: 2rem;
+            color: #ccc; /* 회색 별 */
+        }
+
+        .star-rating .back-stars {
+            color: #ccc; /* 회색 별 */
+        }
+
+        .star-rating .front-stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #f5c518; /* 노란색 별 */
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>리뷰 평균 별점</h1>
+<div class="star-rating">
+    <div class="back-stars">
+        ★★★★★
+    </div>
+    <div class="front-stars" style="width: 50%;">
+        ★★★★★
+    </div>
+</div>
+</body>
+</html>

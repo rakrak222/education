@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG 클리핑 마스크 예제</title>
+    <style>
+        .card {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: black;
+            position: relative;
+        }
+
+        .card-content {
+            flex-grow: 1;
+        }
+
+        .heart-container {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .heart-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* 이미지 자체는 클릭 불가 */
+        }
+    </style>
+</head>
+<body>
+
+<a href="다음페이지.html" class="card">
+    <div class="card-content">
+        <strong>Bronx</strong>
+        <p>운영시간: 10시 30분 - 12시 30분<br>가격: 8000원</p>
+    </div>
+    <div class="heart-container" onclick="toggleLike(event)">
+        <svg viewBox="0 0 24 24" style="width: 100%; height: 100%;">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  fill="transparent" stroke="black" stroke-width="2" />
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+                  fill="transparent" stroke="none" pointer-events="all" />
+        </svg>
+        <img src="heart-icon.png" class="heart-image" alt="Heart Icon" />
+    </div>
+</a>
+
+<script>
+    function toggleLike(event) {
+        event.stopPropagation(); // 클릭 이벤트가 부모 요소로 전파되지 않게 함
+        var heartContainer = event.currentTarget;
+        var img = heartContainer.querySelector('.heart-image');
+        if (heartContainer.classList.toggle('liked')) {
+            img.src = 'heart-icon-liked.png'; // 좋아요 상태일 때의 이미지로 변경
+        } else {
+            img.src = 'heart-icon.png'; // 기본 상태의 이미지로 변경
+        }
+    }
+</script>
+
+</body>
+</html>

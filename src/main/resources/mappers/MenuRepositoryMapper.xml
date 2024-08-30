@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.newlecture.web.class8th.repository.MenuRepository">
+
+    <select id="findAll" resultType="Menu">
+        SELECT M.*,
+            MI.SRC IMG,
+            NVL(ML.LIKE_COUNT, 0) LIKE_COUNT
+        FROM MENU M
+            LEFT JOIN (SELECT * FROM MENU_IMAGE WHERE DEFAULT_IMG = 1) MI
+                ON M.ID = MI.MENU_ID
+            LEFT JOIN (SELECT MENU_ID, COUNT(MENU_ID) LIKE_COUNT FROM MENU_LIKE GROUP BY MENU_ID) ML
+                ON M.ID = ML.MENU_ID
+        <where> <!-- 트림 태그 (구문에 안맞는 것을 제거 가능하다는 뜻) -->
+            <if test="categoryId != null">
+                category_id = #{categoryId}
+            </if>
+            <if test="query != null">
+                AND KOR_NAME LIKE '%' || #{query} || '%' <!-- '%#{query}%' -->
+                OR ENG_NAME LIKE '%' || #{query} || '%'
+            </if>
+        </where>
+        ORDER BY REG_DATE DESC
+    </select>
+
+
+</mapper>

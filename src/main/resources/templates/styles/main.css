@@ -1,0 +1,250 @@
+
+.hidden{
+    visibility: hidden;
+}
+
+/*큰 영역 지정*/
+
+#header{
+    background-color: white;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top:0px;
+}
+
+
+.find-box{
+    background-color: white;
+    height: 7vh;
+    width: 100%;
+
+}
+
+.store-map{
+    background-color: white;
+    height: 55vh;
+    width: 100%;
+
+    background-image:url("../images/map.png"); /* 이미지 삽입 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.store-list-container{
+    background-color: white;
+    height: 27vh;
+    width: 100%;
+
+}
+
+.bottom-nav-bar-container{
+    background-color: white;
+    height: 10vh;
+    position: sticky;
+    bottom:0px;
+}
+
+.top-search-bar{
+
+}
+
+.top-search-bar-btn{
+
+}
+
+
+
+.gps-btn{
+
+}
+
+
+.store-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.main-store-info-grid-box {
+    display: grid;
+    grid-template-columns: 100px 60fr 100px 30px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "img name grade favorite"
+        "img distance distance distance"
+        "img hours hours hours"
+        "img price price price";
+    gap: 10px; /* 그리드 아이템 간의 간격 설정 */
+    background-color: white;
+    padding: 10px; /* 그리드 박스의 내부 여백 설정 */
+}
+
+.main-store-info-img {
+    grid-area: img;
+    background-image:url("../images/image.png"); /* 이미지 삽입 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 16px; /* 라운드 넣기 */
+
+
+
+    background-color: white;
+    text-align: center; /* 이미지가 중앙에 배치되도록 설정 */
+}
+
+.main-store-info-name {
+    grid-area: name;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+}
+
+.main-store-info-distance {
+    grid-area: distance;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.main-store-info-business-hours {
+    grid-area: hours;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.main-store-info-price {
+    grid-area: price;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.main-store-info-grade {
+    grid-area: grade;
+    background-color: white;
+    display: flex;
+    align-items: center;
+
+    background-image:url("../images/star.png"); /* 이미지 삽입 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-store-info-favorite {
+    grid-area: favorite;
+    background-color: white; /* 예시로 색상 추가 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.main-store-info-business-hours{
+
+}
+
+.main-store-info-price{
+
+}
+
+.main-store-info-grade{
+
+}
+
+.main-store-info-favorite{
+
+}
+
+.main-store-info-favorite-btn{
+
+}
+
+
+.bottom-nav-bar{
+
+
+}
+
+/*하단바 그리드*/
+
+.bottom-nav-bar-list{
+    display: grid;
+    grid-template-columns: 60px;
+    grid-template-columns: repeat(5,58px);
+    grid-template-areas:
+        "home search ticket int inf";
+    gap: 15px;
+    grid-template-rows: 79px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center; /* 그리드 전체의 가로 정렬 */
+    align-content: center; /* 그리드 전체의 세로 정렬 */
+
+}
+
+.bottom-nav-bar-home{
+    grid-area: home;
+    background-image:url("../images/home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* 가로로 그리드 셀을 가득 채움 */
+    height: 100%; /* 세로로 그리드 셀을 가득 채움 */
+}
+
+.bottom-nav-bar-search{
+    grid-area: search;
+    background-image:url("../images/search.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* 가로로 그리드 셀을 가득 채움 */
+    height: 100%; /* 세로로 그리드 셀을 가득 채움 */
+}
+
+.bottom-nav-bar-ticket{
+    grid-area: ticket;
+    background-image:url("../images/ticket.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* 가로로 그리드 셀을 가득 채움 */
+    height: 100%; /* 세로로 그리드 셀을 가득 채움 */
+}
+
+.bottom-nav-bar-int{
+    grid-area: int;
+    background-image:url("../images/bookmark.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* 가로로 그리드 셀을 가득 채움 */
+    height: 100%; /* 세로로 그리드 셀을 가득 채움 */
+}
+
+.bottom-nav-bar-my-inf{
+    grid-area: inf;
+    background-image:url("../images/myinf.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%; /* 가로로 그리드 셀을 가득 채움 */
+    height: 100%; /* 세로로 그리드 셀을 가득 채움 */
+}

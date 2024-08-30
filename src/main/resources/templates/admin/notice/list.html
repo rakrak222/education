@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{inc/layout}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <main layout:fragment="main">
+
+
+        <section>
+            <h1>공지사항</h1>
+            <section th:each="n: ${notices}">
+                <h1 th:text="${n.title}">JSP교육이 있습니다.</h1>
+                <div>2024-10-20</div>
+            </section>
+
+            <section>
+                <h1 th:text="#{hello}"></h1>
+                <h1 th:text="#{hello.name('Spring')}"></h1>
+
+            </section>
+
+        </section>
+
+        우아아
+        <div th:text="${test}">안녕하세요</div>
+
+        <div>{{test}}</div>
+    </main>
+</body>
+</html>

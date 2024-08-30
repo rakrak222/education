@@ -1,0 +1,3 @@
+spring.application.name=class8th
+
+server.port=8080

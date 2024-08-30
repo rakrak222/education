@@ -1,0 +1,5 @@
+hello: "안녕 메시지"
+hello.name: "안녕 메시지 {0}"
+label:
+  item:
+    itemName: "상품명"
